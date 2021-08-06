@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Movie Finder</title>
+	<link rel="stylesheet" type="text/css" href="moviefinder.css">
+</head>
+<body>
+<div class="container">
+	<header class="movie-header">
+		<div class="navlogo">
+			<img src="navlogo.png.png" width="80" height="80">
+		</div>
+		<div class="navtext">
+			<span>Movie Finder</span>
+		</div>
+		<nav class="nav-links">
+			<a href="index.html">Home</a>
+			<a href="aboutus.html">About us</a>
+		</nav>
+	</header>
+	<div id="coverpic1"></div>
+	<div class="site-content">
+		<div class="coverimage">
+			<div class="quote">Welcome to movie finder. Here you can find the details of any movie of your choice.</div>
+		</div>
+		<div class="searchbox">
+			<input type="text" placeholder="Enter a Movie name" id="moviename">
+			<button  onclick="showdetails()" id="btn">Search</button>
+			<h3 id="exa">
+				Your results appear below:
+			</h3>
+		</div>
+		<div class="res">
+			<div class="poster">
+				<img id="myImage" src="">
+			</div>
+			<div class="moviedetails">
+				<div>Movie name: <span id="movien"></span></div>
+				<div>Release date: <span id="releasedate"></span></div>
+				<div>Cast: <span id="cast">
+				</span></div>
+				<div>Director: <span id="director"></span></div>
+				<div>Genre: <span id="genre"></span></div>
+				<div>IMDB rating: <span id="imdb"></span></div>
+				<div>Plot: <span id="plot"></span></div>
+			</div>
+		</div>
+		<br>
+		<br>
+		
+	</div>
+
+
+</div>
+
+		</body>
+		<script type="text/javascript">
+				function showdetails(){
+				moviename=document.getElementById("moviename").value;
+
+				httpRequest = new XMLHttpRequest();
+				url = "http://www.omdbapi.com/?i=tt3896198&apikey=e82c4d4d&t="+moviename
+				httpRequest.open("GET",url);
+				httpRequest.send();
+
+				httpRequest.onreadystatechange =function(){
+					if (this.readyState == 4 && this.status == 200)
+				{
+					user_data = JSON.parse(this.responseText);
+					document.getElementById("movien").innerHTML=user_data.Title;
+					document.getElementById("releasedate").innerHTML=user_data.Released;
+					document.getElementById("cast").innerHTML=user_data.Actors;
+					document.getElementById("myImage").src = user_data.Poster;
+					document.getElementById("director").innerHTML=user_data.Director;
+					document.getElementById("genre").innerHTML=user_data.Genre;
+					document.getElementById("imdb").innerHTML=user_data.imdbRating;
+					document.getElementById("plot").innerHTML=user_data.Plot;
+				}
+				}
+
+
+
+
+			}
+		</script>
+
+</html>

@@ -1,0 +1,135 @@
+body{
+	margin: 0px;
+}
+#coverpic1{
+	margin-top: 100px;
+	background-image: url(background2.jpg);
+	height: 100%;
+	opacity: 0.5;
+	width: 100%;
+	position: fixed;
+
+
+}
+
+.movie-header{
+	position: fixed;
+	height: 100px;
+	width: 100%;
+	background-color: grey;
+	z-index:100;
+}
+
+.navlogo{
+	margin:10px;
+	float: left;
+}
+
+.navtext{
+    display: block;
+	font-size: 30px;
+	color: #764329;
+	font-style:italic;
+	font-family: cursive,sans-serif;
+	padding-bottom: 30px;
+	padding-top: 30px;
+	float: left;
+	text-align: center;
+
+
+}
+.nav-links{
+	float: right;
+	height: 100%;
+}
+.nav-links a{
+	font-size: 15px;
+	font-weight: 700;
+	font-family:"arial black";
+	color: white;
+	padding-right: 20px;
+	padding-top: 12%;
+	display: inline-block;
+}
+.site-content{
+	position: absolute;
+	top: 78px;
+	width:100%;
+	 color: red;
+	 font-family: cursive,sans-serif,auto;
+	-webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+}
+
+
+.coverimage{
+	height: 200px;
+	width: 100%;
+	text-align: center;
+}
+
+
+.quote{
+	max-width: 100%;
+    max-height: 100%; 
+    position: relative;
+    top: 30%;
+    font-size: x-large;
+
+}
+.searchbox{
+	height: 150px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.searchbox input{
+	display: block;
+	width: 70%;
+	padding:10px;
+	margin: 0 auto;
+}
+.searchbox button{
+	margin-top: 10px;
+	height: 33px;
+	width:20%;
+}
+#btn{
+	font-size: 15px;
+}
+
+#exa{
+	font-size: 20px;
+}
+.res{
+	height: 400px;
+	width: 100%;
+}
+.poster{
+	height: 100%;
+	width: 45%;
+	display: inline;
+	float: left;
+	border: 2px solid black;
+}
+.moviedetails{
+	height: 100%;
+	width: 50%;
+	display:inline-block;
+	float: left;
+}
+.moviedetails div{
+	height: 10%;
+	margin:10px;
+	font-size: 17px;
+}
+.poster img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 99%;
+	max-height: 100%;
+	max-width: 70%;
+	border: 2px solid black;
+}
